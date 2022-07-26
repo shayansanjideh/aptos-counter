@@ -35,6 +35,5 @@ module AptosCounter::Counter {
         counter.counter = counter.counter + 1
     }
 
-
-
+    
 }
