@@ -1,0 +1,9 @@
+[package]
+name = "Counter"
+version = "0.0.0"
+
+[dependencies]
+AptosFramework = { local = "../../aptos-core/aptos-move/framework/aptos-framework" }
+
+[addresses]
+AptosCounter = "0xA905AA2B7734BFD044E9EF3CD10561B5E8D1DC1D6DE2DF6C35CFA2D2A3D544A9"
