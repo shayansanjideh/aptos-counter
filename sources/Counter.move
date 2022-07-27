@@ -23,9 +23,10 @@ module AptosCounter::Counter {
 
     const ENOT_INIT: u64 = 0;
 
-    public fun get_counter(addr: address): u8 acquires CounterHolder {
-        assert!(exists<CounterHolder>(addr), error::not_found(ENOT_INIT));
-        *&borrow_global<CounterHolder>(addr).counter
+    public fun get_counter(account: signer): u8 acquires CounterHolder {
+        let account_addr = signer::address_of(&account);
+        let counter = borrow_global_mut<CounterHolder>(account_addr);
+        counter.counter
     }
 
     public entry fun inc_counter(account: signer)
@@ -34,6 +35,5 @@ module AptosCounter::Counter {
         let counter = borrow_global_mut<CounterHolder>(account_addr);
         counter.counter = counter.counter + 1
     }
-
 
 }

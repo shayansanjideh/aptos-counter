@@ -6,4 +6,4 @@ version = "0.0.0"
 AptosFramework = { local = "../../aptos-core/aptos-move/framework/aptos-framework" }
 
 [addresses]
-AptosCounter = "0xA905AA2B7734BFD044E9EF3CD10561B5E8D1DC1D6DE2DF6C35CFA2D2A3D544A9"
+AptosCounter = "0xAF49AB5799B9CEF57C363337AA8B71AE3A9EE91512005C3517C95F2944EE1364"
